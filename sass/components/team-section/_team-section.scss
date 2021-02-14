@@ -1,0 +1,73 @@
+/* Стилизация секции с командой */
+
+.team.section {
+  background-color: $light-bcg-color;
+}
+
+.team-container {
+  @extend %container;
+}
+
+.team-list {
+  display: flex;
+
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+.team-item {
+  box-shadow: $card-shadow;
+  border-radius: (0px 0px 4px 4px);
+  background-color: $primary-bcg-color;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.employee {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
+.employee-title {
+  margin-bottom: 10px;
+
+  color: $sub-text-color;
+  font-weight: 500;
+}
+
+.employee-job {
+  margin-bottom: 16px;
+}
+
+.team-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+.team-thumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  @include rounded(50%);
+  color: $primary-icon-fill;
+
+  @include transitioned(background-color);
+  @include transitioned(color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-bcg-color;
+  }
+}
+
+.team-icon {
+  fill: currentColor;
+}

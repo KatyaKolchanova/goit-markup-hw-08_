@@ -1,0 +1,204 @@
+/* Стилизация формы в модальном окне */
+
+.modal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 448px;
+
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.form-title {
+  margin-bottom: 12px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+  color: $sub-text-color;
+}
+
+.request-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: $primary-text-color;
+
+  &.comment {
+    margin-bottom: 20px;
+  }
+
+  & input::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.request-label {
+  margin-bottom: 4px;
+}
+
+.request-input {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 42px;
+
+  color: $request-input-icon-fill;
+  @include rounded;
+  @include bordered(rgba(33, 33, 33, 0.2));
+
+  @include transitioned(border-color);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
+
+  &.comment {
+    width: 100%;
+    min-height: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    resize: none;
+  }
+}
+
+// .request-input:hover,
+// .request-input:focus
+
+.request-icon {
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+
+  fill: currentColor;
+
+  @include transitioned(fill);
+
+  .request-input:hover + &,
+  .request-input:focus + & {
+    fill: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.field-checkmark {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin-bottom: 30px;
+  padding-right: 11px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: end;
+
+  color: $primary-text-color;
+}
+
+.checkbox {
+  border-color: $request-input-icon-fill;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include transitioned(border-color);
+  @include transitioned(box-shadow);
+}
+
+// .checkbox:hover,
+// .checkbox:focus
+
+.checkbox-label::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 4.5px;
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+
+  @include bordered($request-input-icon-fill, 2px);
+  @include rounded(2px);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  .checkbox:hover + &,
+  .checkbox:focus + &,
+  .checkbox:checked + & {
+    border-color: $accent-color;
+    box-shadow: none;
+  }
+
+  .checkbox:checked + & {
+    background-color: $accent-color;
+  }
+}
+
+.link-terms {
+  text-decoration-skip-ink: none;
+  color: $accent-color;
+}
+
+// .link-terms:hover,
+// .link-terms:focus
+
+.request-send {
+  display: flex;
+  margin: 0 auto;
+  width: 200px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 56px;
+  padding-left: 55px;
+  text-align: center;
+  cursor: pointer;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  border: none;
+  @include rounded;
+  color: $primary-text-color-darkbcg;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  background-color: $accent-color;
+
+  @include transitioned(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color-button-hover;
+  }
+}
+
+// .request-send:hover,
+// .request-send:focus
+
+// .request-send {
+//   background-color: $accent-color;
+
+//   transition: background-color $action-duration $action-timing-function;
+// }

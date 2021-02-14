@@ -1,0 +1,36 @@
+/* Стилизация футера */
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $dark-bcg-color;
+  color: $primary-text-color-darkbcg;
+}
+
+.footer-container {
+  @extend %container;
+}
+
+.heading {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.logo-thumb {
+  width: 231px;
+  margin-right: 70px;
+}
+
+.social-title,
+.subscribe-title {
+  @extend %footer-titles;
+}
+
+.social-title {
+  margin-right: 154px;
+}
+
+.footer-actions {
+  display: flex;
+  justify-content: flex-start;
+}

@@ -1,0 +1,40 @@
+/* Стилизация секции с услугами */
+
+.section-services {
+  padding-bottom: 94px;
+}
+
+.services-container {
+  @extend %container;
+}
+
+.services-list {
+  display: flex;
+}
+
+.services-item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.services-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  text-align: center;
+
+  background: rgba(47, 48, 58, 0.8);
+  color: $primary-text-color-darkbcg;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}

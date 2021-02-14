@@ -1,0 +1,46 @@
+/* Стилизация секции со списком клиентов */
+
+.section-clients {
+  padding: 94px 0;
+}
+
+.clients-container {
+  @extend %container;
+}
+
+.clients-list {
+  display: flex;
+}
+
+.client-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.client-thumb {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  @include bordered($primary-icon-fill);
+  @include rounded(4px);
+  background-color: $primary-bcg-color;
+  color: $primary-icon-fill;
+
+  @include transitioned(background-color);
+  @include transitioned(color);
+  @include transitioned(border);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-bcg-color;
+    color: $accent-color;
+    @include bordered($accent-color);
+  }
+}
+
+.client-icon {
+  fill: currentColor;
+}

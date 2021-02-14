@@ -1,0 +1,20 @@
+/* Стилизация лого в хедере и футере*/
+
+.logo-dark {
+  @extend %logo;
+
+  .header & {
+    color: $sub-text-color;
+    margin-right: 93px;
+  }
+}
+
+.logo-light {
+  @extend %logo;
+  color: $primary-text-color-darkbcg;
+}
+
+.logo-accent {
+  @extend %logo;
+  color: $accent-color;
+}

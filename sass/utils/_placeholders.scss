@@ -1,0 +1,58 @@
+// Плейсхолдер для контейнера
+%container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+// Плейсхолдер для кнопок {
+// %button {
+//   display: inline-block;
+//   @include rounded;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   min-width: 73px;
+//   cursor: pointer;
+// }
+
+// Плейсхолдер для лого
+
+%logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+}
+
+// Линки в хедере
+
+// %header-links {
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   letter-spacing: 0.02em;
+//   text-decoration: none;
+// }
+
+// Заглавия в футере
+
+%footer-titles {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+// Линки в футере
+
+%footer-links {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}

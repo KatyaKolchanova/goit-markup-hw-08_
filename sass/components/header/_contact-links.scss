@@ -1,0 +1,38 @@
+.header-email {
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+
+  color: $primary-text-color;
+  text-decoration: none;
+
+  @include transitioned(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.email-icon,
+.phone-icon {
+  margin-right: 10px;
+  fill: currentColor;
+
+  @include transitioned(fill);
+
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
