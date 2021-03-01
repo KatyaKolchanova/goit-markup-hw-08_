@@ -1,10 +1,25 @@
 .footer-address {
   width: 231px;
-  margin-right: 70px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
 
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+
+@media screen and (min-width: $desktop) {
+  .footer-address {
+    margin-right: 70px;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.logo-thumb {
+  width: 231px;
+  margin-bottom: 20px;
 }
 
 .location {

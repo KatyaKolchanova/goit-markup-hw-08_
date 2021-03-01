@@ -1,7 +1,28 @@
 .footer-social {
+  display: block;
+  width: 206px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
+}
+
+@media screen and (min-width: $desktop) {
+  .footer-social {
+    margin-right: 93px;
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-top: 12px;
+  }
+}
+
+.social-title {
+  @extend %footer-titles;
+  margin-bottom: 20px;
+}
+
+.social-list {
   display: flex;
-  justify-content: flex-start;
-  margin-right: 93px;
+  justify-content: space-between;
 }
 
 .footer-link {
@@ -16,10 +37,6 @@
   color: $primary-bcg-color;
 
   @include transitioned(background-color);
-
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
 
   &:hover,
   &:focus {

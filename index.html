@@ -16,8 +16,8 @@
   </head>
   
 	<body>
-		<header class="header">
-			<div class="header-container">
+		<header class="header-section">
+			<div class="header container">
 				<a class="logo-dark" href="./index.html">
 					<span class="logo-accent">Web</span>Studio
 				</a>
@@ -58,7 +58,7 @@
 				
 				<!--Секция с перечислением основных преимуществ-->
 				<section class="benefits section">
-					<div class="benefits-container">
+					<div class="benefits container">
 						<h2 class="visually-hidden">Особенности</h2>
 						<ul class="benefits-list">
 							<li class="benefits-item">
@@ -103,7 +103,7 @@
 				
 				<!--Секция с перечислением услуг-->
 				<section class="section-services">
-					<div class="services-container">
+					<div class="services container">
 						<h2 class="section-title">Чем мы занимаемся</h2>
 						<ul class="services-list">
 							<li class="services-item">
@@ -130,13 +130,17 @@
 				
 				<!--Секция с перечнем членов команды-->
 				<section class="team section">
-					<div class="team-container">
+					<div class="team container">
 						<h2 class="section-title">Наша команда</h2>
 						<ul class="team-list">
 							<li class="team-item">
-								<img src="./images/IhorDemyanenko.jpg"
-									alt="Улыбающийся шатен с короткой стрижкой в очках с бородой и усами, одет в бордовую рубашку"
-									width="270">
+								<picture>
+									<source media="(max-width: 480px)" srcset="./images/IhorDemyanenko-mobile.jpg">
+									<source media="(min-width: 1200px)" srcset="./images/IhorDemyanenko-desktop.jpg">
+									<source media="(min-width: 768px)" srcset="./images/IhorDemyanenko-tablet.jpg">
+									<img class="employee-photo" src="./images/IhorDemyanenko-mobile.jpg"
+											alt="Улыбающийся шатен с короткой стрижкой в очках с бородой и усами, одет в бордовую рубашку">
+								</picture>
 								<div class="employee">
 									<h3 class="employee-title">Игорь Демьяненко</h3>
 									<p lang="en" class="employee-job">Product Designer</p>
@@ -165,9 +169,13 @@
 								</div>
 							</li>
 							<li class="team-item">
-								<img src="./images/OlgaRepina.jpg"
-									alt="Улыбающаяся блондинка с волосами до плечей в очках, одета в белую блузку с черным пиджаком поверх, руки сложены на груди"
-									width="270">
+								<picture>
+									<source media="(max-width: 480px)" srcset="./images/OlgaRepina-mobile.jpg">
+									<source media="(min-width: 1200px)" srcset="./images/OlgaRepina-desktop.jpg">
+									<source media="(min-width: 768px)" srcset="./images/OlgaRepina-tablet.jpg">
+									<img class="employee-photo" src="./images/OlgaRepina-mobile.jpg"
+										alt="Улыбающаяся блондинка с волосами до плечей в очках, одета в белую блузку с черным пиджаком поверх, руки сложены на груди">
+								</picture>
 								<div class="employee">
 									<h3 class="employee-title">Ольга Репина</h3>
 									<p lang="en" class="employee-job">Frontend Developer</p>
@@ -196,9 +204,13 @@
 								</div>
 							</li>
 							<li class="team-item">
-								<img src="./images/NikolayTarasov.jpg"
-									alt="Улыбающийся шатен с короткой стрижкой и недлинной бородой и усами, одет в светлую рубашку"
-									width="270">
+								<picture>
+									<source media="(max-width: 480px)" srcset="./images/NikolayTarasov-mobile.jpg">
+									<source media="(min-width: 1200px)" srcset="./images/NikolayTarasov-desktop.jpg">
+									<source media="(min-width: 768px)" srcset="./images/NikolayTarasov-tablet.jpg">
+									<img class="employee-photo" src="./images/NikolayTarasov-mobile.jpg"
+										alt="Улыбающийся шатен с короткой стрижкой и недлинной бородой и усами, одет в светлую рубашку">
+								</picture>
 								<div class="employee">
 									<h3 class="employee-title">Николай Тарасов</h3>
 									<p lang="en" class="employee-job">Marketing</p>
@@ -227,9 +239,13 @@
 								</div>
 							</li>
 							<li class="team-item">
-								<img src="./images/MikhailErmakov.jpg"
-									alt="Ухмыляющийся шатен с короткой стрижкой в очках с бородой и усами, одет в черную футболку с коротким рукавом"
-									width="270">
+								<picture>
+									<source media="(max-width: 480px)" srcset="./images/MikhailErmakov-mobile.jpg">
+									<source media="(min-width: 1200px)" srcset="./images/MikhailErmakov-desktop.jpg">
+									<source media="(min-width: 768px)" srcset="./images/MikhailErmakov-tablet.jpg">
+									<img class="employee-photo" src="./images/MikhailErmakov-mobile.jpg"
+										alt="Ухмыляющийся шатен с короткой стрижкой в очках с бородой и усами, одет в черную футболку с коротким рукавом">
+								</picture>
 								<div class="employee">
 									<h3 class="employee-title">Михаил Ермаков</h3>
 									<p lang="en" class="employee-job">UI Designer</p>
@@ -263,7 +279,7 @@
 				
 				<!--Секция со списком клиентов-->
 				<section class="section-clients">
-					<div class="clients-container">
+					<div class="clients container">
 						<h2 class="section-title">Постоянные клиенты</h2>
 						<ul class="clients-list">
 							<li class="client-item">
@@ -314,19 +330,15 @@
 					
 			</main>
 
-		<footer class="footer">
-			<div class="footer-container">
-				<div class="heading">
-					<div class="logo-thumb">
-						<a class="logo-light" href="./index.html">
-							<span class="logo-accent">Web</span>Studio
-						</a>
-					</div>
-					<p class="social-title">присоединяйтесь</p>
-					<p class="subscribe-title">Подпишитесь на рассылку</p>
-				</div>
+		<footer class="footer-section">
+			<div class="footer container">
 				<div class="footer-actions">
 					<address class="footer-address">
+						<div class="logo-thumb">
+							<a class="logo-light" href="./index.html">
+								<span class="logo-accent">Web</span>Studio
+							</a>
+						</div>
 						<p class="location">г. Киев, пр-т Леси Украинки, 26</p>
 						<div class="footer-contacts">
 							<a class="email-link" href="mailto:info@devstudio.com" lang="en">info@devstudio.com</a>
@@ -334,28 +346,40 @@
 						</div>
 					</address>
 					<div class="footer-social">
-						<a href="" class="footer-link">
-							<svg class="link-icon" width="20px" height="20px">
-								<use href="./images/sprite.svg#icon-instagram"></use>
-							</svg>
-						</a>
-						<a href="" class="footer-link">
-							<svg class="link-icon" width="20px" height="20px">
-								<use href="./images/sprite.svg#icon-twitter"></use>
-							</svg>
-						</a>
-						<a href="" class="footer-link">
-							<svg class="link-icon" width="20px" height="20px">
-								<use href="./images/sprite.svg#icon-facebook"></use>
-							</svg>
-						</a>
-						<a href="" class="footer-link">
-							<svg class="link-icon" width="20px" height="20px">
-								<use href="./images/sprite.svg#icon-linkedin"></use>
-							</svg>
-						</a>
+						<p class="social-title">присоединяйтесь</p>
+						<ul class="social-list">
+							<li>
+								<a href="" class="footer-link">
+									<svg class="link-icon" width="20px" height="20px">
+										<use href="./images/sprite.svg#icon-instagram"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="" class="footer-link">
+									<svg class="link-icon" width="20px" height="20px">
+										<use href="./images/sprite.svg#icon-twitter"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="" class="footer-link">
+									<svg class="link-icon" width="20px" height="20px">
+										<use href="./images/sprite.svg#icon-facebook"></use>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a href="" class="footer-link">
+									<svg class="link-icon" width="20px" height="20px">
+										<use href="./images/sprite.svg#icon-linkedin"></use>
+									</svg>
+								</a>
+							</li>
+						</ul>
 					</div>
-					<div>
+					<div class="footer-subscribe">
+						<p class="subscribe-title">Подпишитесь на рассылку</p>
 						<form class="subscribe-form" name="subscribe-form" autocomplete="on" novalidate>
 							<div class="subscribe-field">
 								<input class="subscribe-input" type="email" name="email" placeholder="E-mail">
@@ -374,7 +398,7 @@
 
 			<!--Модальное окно-->
 			<div class="backdrop  is-hidden" data-modal>
-				<div class="modal-container">
+				<div class="modal container">
 					<div class="modal-form">
 						<p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
 						<form class="request-form" name="request-form" autocomplete="on" novalidate>

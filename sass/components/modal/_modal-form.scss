@@ -78,9 +78,6 @@
   }
 }
 
-// .request-input:hover,
-// .request-input:focus
-
 .request-icon {
   position: absolute;
   bottom: 11px;
@@ -121,9 +118,6 @@
   @include transitioned(box-shadow);
 }
 
-// .checkbox:hover,
-// .checkbox:focus
-
 .checkbox-label::after {
   content: "";
   position: absolute;
@@ -159,9 +153,6 @@
   color: $accent-color;
 }
 
-// .link-terms:hover,
-// .link-terms:focus
-
 .request-send {
   display: flex;
   margin: 0 auto;
@@ -193,12 +184,3 @@
     background-color: $accent-color-button-hover;
   }
 }
-
-// .request-send:hover,
-// .request-send:focus
-
-// .request-send {
-//   background-color: $accent-color;
-
-//   transition: background-color $action-duration $action-timing-function;
-// }

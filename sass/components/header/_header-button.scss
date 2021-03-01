@@ -1,0 +1,104 @@
+.header-components {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// .site-nav {
+//   display: inline-flex;
+// }
+
+// .header {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+
+//   z-index: 1;
+
+//   background-color: $primary-bcg-color;
+//   @include bottom-bordered(#ececec);
+// }
+
+// .header-container {
+//   @extend %container;
+// }
+
+.logo-dark {
+  @extend %logo;
+
+  .header & {
+    color: $sub-text-color;
+    margin-right: 93px;
+  }
+}
+
+.logo-accent {
+  @extend %logo;
+  color: $accent-color;
+}
+
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.icon-cross {
+  .menu-button & {
+    display: none;
+  }
+
+  .menu-button.is-open & {
+    display: block;
+  }
+}
+
+.icon-menu {
+  .menu-button.is-open & {
+    display: none;
+  }
+}
+
+.menu-container {
+  display: none;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  padding: 20px;
+  text-align: center;
+
+  font-size: 20px;
+
+  background-color: violet;
+
+  &.is-open {
+    display: block;
+  }
+}
+
+// .menu-button .icon-cross {
+//   display: none;
+// }
+
+// .menu-button.is-open .icon-cross {
+//   display: block;
+// }
+
+// .menu-button.is-open .icon-menu {
+//   display: none;
+// }
+
+// .menu-button .icon-cross {
+//   display: none;
+// }
+
+// .menu-button.is-open .icon-cross {
+//   display: block;
+// }

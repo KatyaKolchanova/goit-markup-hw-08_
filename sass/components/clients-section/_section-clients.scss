@@ -1,19 +1,73 @@
 /* Стилизация секции со списком клиентов */
 
 .section-clients {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
-.clients-container {
-  @extend %container;
+@media screen and (min-width: $desktop) {
+  .section-clients {
+    padding: 94px 0;
+  }
 }
 
 .clients-list {
   display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+
+  & .clients-item {
+    width: calc((100% - 2 * 30px) / 2);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .clients-list .clients-item {
+    width: calc(768px / 3 - 60px);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .clients-list .clients-item {
+    width: calc((1200px - 6 * 30px) / 6);
+  }
 }
 
 .client-item {
   &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: $mobile) and (max-width: 767px) {
+  .client-item {
+    &:nth-child(-n + 4) {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .client-item {
+    margin-right: 30px;
+    margin-bottom: 0;
+
+    &:nth-child(-n + 3) {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .client-item:not(:last-child) {
+    margin-bottom: 0;
     margin-right: 30px;
   }
 }
@@ -22,7 +76,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
+  width: 210px;
   height: 90px;
   @include bordered($primary-icon-fill);
   @include rounded(4px);
@@ -38,6 +92,18 @@
     background-color: $primary-bcg-color;
     color: $accent-color;
     @include bordered($accent-color);
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .client-thumb {
+    width: 226px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .client-thumb {
+    width: 170px;
   }
 }
 

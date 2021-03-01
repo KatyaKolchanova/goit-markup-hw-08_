@@ -1,11 +1,18 @@
 /* Стилизация секции с услугами */
 
 .section-services {
-  padding-bottom: 94px;
+  display: none;
+
+  @media screen and (max-width: 1199px) {
+    padding-bottom: 94px;
+  }
 }
 
-.services-container {
-  @extend %container;
+@media screen and (min-width: $desktop) {
+  .section-services {
+    display: block;
+    padding-bottom: 94px;
+  }
 }
 
 .services-list {

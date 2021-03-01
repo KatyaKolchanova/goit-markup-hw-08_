@@ -1,20 +1,61 @@
 /* Общая стилизация*/
-// .container {
-//   width: 1200px;
-//   margin-left: auto;
-//   margin-right: auto;
-//   padding-left: 15px;
-//   padding-right: 15px;
-// }
-
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  // width: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.section-title {
-  margin-bottom: 50px;
+@media screen and (min-width: $desktop) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
+
+// Стилизация контейнера
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: $mobile) {
+  .container {
+    width: $mobile;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .container {
+    width: $tablet;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .container {
+    width: $desktop;
+  }
+}
+
+/* Стилизация заголовков на странице */
+.section-title {
+  margin-bottom: 30px;
+
+  color: $sub-text-color;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+@media screen and (min-width: $tablet) {
+  .section-title {
+    margin-bottom: 50px;
+  }
+}
+
+// Стилизация кнопок
 
 .button {
   display: inline-block;
@@ -41,13 +82,4 @@ img {
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-/* Стилизация заголовков на странице */
-.section-title {
-  color: $sub-text-color;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
 }

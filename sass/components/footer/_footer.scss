@@ -1,36 +1,44 @@
 /* Стилизация футера */
-.footer {
+.footer-section {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: $dark-bcg-color;
   color: $primary-text-color-darkbcg;
 }
 
-.footer-container {
-  @extend %container;
+.footer.container {
+  text-align: center;
 }
 
-.heading {
-  display: flex;
-  align-items: baseline;
-  margin-bottom: 20px;
+@media screen and (min-width: $tablet) {
+  .footer.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
 }
 
-.logo-thumb {
-  width: 231px;
-  margin-right: 70px;
-}
-
-.social-title,
-.subscribe-title {
-  @extend %footer-titles;
-}
-
-.social-title {
-  margin-right: 154px;
+@media screen and (min-width: $desktop) {
+  .footer.container {
+    text-align: start;
+  }
 }
 
 .footer-actions {
-  display: flex;
-  justify-content: flex-start;
+  display: block;
+}
+
+@media screen and (min-width: $tablet) {
+  .footer-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .footer-actions {
+    display: flex;
+    justify-content: flex-start;
+  }
 }

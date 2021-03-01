@@ -1,6 +1,6 @@
 /* Стилизация хедера */
 
-.header {
+.header-section {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,9 +12,9 @@
   @include bottom-bordered(#ececec);
 }
 
-.header-container {
+.header.container {
   display: flex;
   align-items: center;
 
-  @extend %container;
+  // @extend %container;
 }

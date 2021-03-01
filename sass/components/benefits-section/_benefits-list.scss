@@ -1,20 +1,59 @@
 /* Стилизация секции с преимуществами */
 
-.benefits-container {
-  @extend %container;
+.benefits-list {
+  display: block;
+  text-align: center;
 }
 
-.benefits-list {
-  display: flex;
+@media screen and (min-width: $tablet) {
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .benefits-item {
+      width: calc(768px / 2 - 30px);
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .benefits-list {
+    display: flex;
+
+    & .benefits-item {
+      width: calc((1200px - 4 * 30px) / 4);
+    }
+  }
 }
 
 .benefits-item:not(:last-child) {
-  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: $tablet) and (max-width: 1199px) {
+  .benefits-item:not(:last-child) {
+    margin-bottom: 0;
+
+    &:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .benefits-item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
 }
 
 .benefits-background {
   margin: 0 0 30px 0;
-  padding: 25px 100px;
+  padding: 25px 0;
   background-color: $light-bcg-color;
 }
 
@@ -26,9 +65,24 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  text-align: center;
+}
+
+@media screen and (min-width: $tablet) {
+  .benefits-title {
+    text-align: left;
+  }
 }
 
 .benefits-text {
   font-size: 14px;
   line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+@media screen and (min-width: $tablet) {
+  .benefits-text {
+    text-align: left;
+  }
 }
